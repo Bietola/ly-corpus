@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mulydl"
+version = "0.1.0"
+description = ""
+authors = ["Bietola <dincio.montesi@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+bs4 = "^0.0.1"
+urllib5 = "^5.0.0"
+fire = "^0.4.0"
+lxml = "^4.6.2"
+cardinality = "^0.1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+mulydl-get-all-ly-links = 'mulydl.get_all_ly_links:cli'
+mulydl-remove-expanded-zips = 'mulydl.remove_expanded_zips:cli'
+mulydl-dl-until-size = 'mulydl.dl_until_size:cli'
